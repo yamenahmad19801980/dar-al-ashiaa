@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-arabic: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-latin: "IBM Plex Sans", system-ui, sans-serif;
+
+  --color-navy-800: #252750;
+  --color-navy-600: #3B3F7A;
+  --color-navy-100: #E7E8F2;
+
+  --color-gold-500: #D0AE29;
+  --color-gold-700: #8A6D12;
+  --color-gold-100: #F3E7B8;
+
+  --color-surface-0: #FFFFFF;
+  --color-surface-1: #F5F6FA;
+
+  --color-ink-500: #5B607A;
+  --color-line-200: #D9DBE6;
+
+  --color-success-600: #1E7A55;
+  --color-warning-600: #A15C00;
+  --color-danger-600: #B3261E;
+  --color-info-600: #1F5FAD;
+}
+
+:root {
+  font-family: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, sans-serif;
+  --navy-800: #252750;
+  --navy-600: #3B3F7A;
+  --navy-100: #E7E8F2;
+  --gold-500: #D0AE29;
+  --gold-700: #8A6D12;
+  --gold-100: #F3E7B8;
+  --surface-0: #FFFFFF;
+  --surface-1: #F5F6FA;
+  --ink-500: #5B607A;
+  --line-200: #D9DBE6;
+}
+
+/* Custom scrollbar for mobile feel */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9DBE6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5B607A;
+}
+
+/* Tap highlight prevention for mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Safe areas */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 16px);
+}
+
+/* Subtle corner brackets animation */
+@keyframes bracketDrawIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-bracket {
+  animation: bracketDrawIn 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bracket {
+    animation: none;
+  }
+}

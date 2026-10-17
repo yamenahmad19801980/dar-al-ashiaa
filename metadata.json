@@ -1,0 +1,6 @@
+{
+  "name": "Dar El Ashaa Mobile App - دار الأشعة",
+  "description": "تطبيق الهاتف المحمول لمنظومة دار الأشعة بالإسكندرية: حجز الفحوصات، استلام النتائج برمز QR، المحادثة التفاعلية الفورية، وخدمات الأطباء المحولين.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
